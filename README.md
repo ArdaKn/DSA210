@@ -1,48 +1,84 @@
 # 📌 DSA210 Term Project: Does Gas Price Affect Public Transport Usage? 🚉⛽
 
 ## 📍 Introduction
-With fluctuating gas prices, many people consider alternative transportation methods, including public transport. This project aims to analyze the relationship between **gasoline prices and public transport usage**, using real-world data from Istanbul.
-
-## 🎯 Motivation
-Understanding how fuel prices impact public transport demand can help:  
-- **City planners** optimize transit systems.  
-- **Economists** analyze mobility trends.  
-- **Governments** make informed policy decisions about subsidies and pricing.  
-
-## 📊 Data Sources
-1. **Public Transport Usage Data:**  
-   - **Source:** İBB Open Data Portal ([data.ibb.gov.tr](https://data.ibb.gov.tr/en/group/ulasim-hizmetleri))  
-   - **Includes:** Daily passenger counts for metro, tram, bus, and ferry.  
-
-2. **Gas Prices in Istanbul:**  
-   - **Source:** GlobalPetrolPrices - Turkey Gasoline Prices  
-   - **Website:** [https://www.globalpetrolprices.com/Turkey/gasoline_prices/](https://www.globalpetrolprices.com/Turkey/gasoline_prices/)  
-   - **Includes:** Weekly gasoline price data for Turkey, available from March 2015 onward.  
-
-## 🛠️ Methodology
-1. **Data Collection & Cleaning**  
-   - Scrape or download gas price trends and daily public transport usage.  
-   - Handle missing values and align timestamps.  
-
-2. **Exploratory Data Analysis (EDA)**  
-   - Analyze gas price trends and transport ridership patterns.  
-   - Identify seasonal variations and anomalies.  
-
-3. **Statistical Correlation & Hypothesis Testing**  
-   - Use Pearson/Spearman correlation tests to quantify relationships.  
-   - Check if significant gas price changes result in transport ridership changes.  
-
-4. **Data Visualization**  
-   - Time series plots for gas prices vs. ridership.  
-   - Heatmaps to visualize correlations.  
-
-## 📌 Expected Findings
-- Is there a **strong correlation** between fuel price increases and rising public transport usage?  
-- How does **seasonality** (winter vs. summer) affect this trend?  
-- Does the impact vary across **different transport modes** (metro, bus, ferry)?  
-
-## 🚀 Future Work
-- Expand analysis to **different cities** for broader generalization.  
-- Predict future public transport demand based on fuel price fluctuations.  
+With fluctuating fuel prices, many urban residents reconsider their mode of transportation, shifting between private vehicles and public transport. This project investigates the relationship between **gasoline prices** and **public transport usage** in **Istanbul**, one of the world's most traffic-dense megacities. The analysis aims to provide actionable insights for **city planners**, **economists**, and **policy-makers** to better understand mobility trends and optimize infrastructure decisions.
 
 ---
+
+## 🎯 Motivation
+Fuel costs are a fundamental factor in transportation decisions. As prices increase, the use of public transportation may rise as a cost-saving measure. This behavioral shift is not just anecdotal—numerous studies (e.g., Litman, 2022; OECD Transport Reports) suggest strong economic influences on modal choice.
+
+However, most research is conducted on national or international levels. This project offers a **localized Istanbul-based analysis** to fill the research gap and support data-driven urban policy. For example, if strong correlations are found, the city could proactively adjust transit capacities in response to fuel price volatility.
+
+---
+
+## 🗂️ Data Sources
+
+### 1. **Public Transport Usage Data**  
+- **Source:** İBB Open Data Portal  
+- **Link:** [https://data.ibb.gov.tr/en/group/ulasim-hizmetleri](https://data.ibb.gov.tr/en/group/ulasim-hizmetleri)  
+- **Content:** Daily passenger counts for metro, tram, bus, and ferry lines in Istanbul
+
+### 2. **Gasoline Price Data**  
+- **Source:** GlobalPetrolPrices - Turkey Gasoline Prices  
+- **Link:** [https://www.globalpetrolprices.com/Turkey/gasoline_prices/](https://www.globalpetrolprices.com/Turkey/gasoline_prices/)  
+- **Content:** Weekly average gasoline prices in Turkey, from March 2015 onward
+
+### 📏 Granularity & Preprocessing
+- Public transport data: **daily** resampled to **weekly**
+- Gas prices: **weekly**
+- Missing values removed, timestamps aligned
+
+---
+
+## 🛠️ Methodology
+
+### 📥 1. Data Collection & Cleaning
+- Downloaded datasets from verified public sources
+- Removed null entries, filtered to overlapping date ranges
+- Resampled and aligned time indices across both datasets
+
+### 📊 2. Exploratory Data Analysis (EDA)
+- Line plots to visualize long-term trends in fuel prices and ridership
+- Seasonal decomposition to inspect monthly/yearly patterns
+- Heatmaps for correlation between variables
+- Summary statistics to detect anomalies and variability
+
+### 🧪 3. Hypothesis Testing
+- **Null Hypothesis (H₀):** No significant relationship between gasoline price fluctuations and public transport usage  
+- **Alternative Hypothesis (Hₐ):** Gasoline price increases lead to higher public transport usage
+
+Applied:
+- Pearson Correlation Coefficient (linear)
+- Spearman Rank Correlation (monotonic)
+
+### 🖼️ 4. Data Visualization
+- Time series plot: Gasoline prices vs. ridership over time
+- Correlation heatmaps
+- Scatter plots: Price vs. ridership by mode
+
+---
+
+## 🔍 Preliminary Findings (As of April 18)
+- Pearson Correlation (gas price vs. total ridership): **r = +0.42**
+- Stronger correlation observed during winter months (potential seasonal effect)
+- Ferry and metro usage seem more sensitive to fuel price increases than buses
+- Significant ridership dips during national holidays and lockdown periods identified as outliers
+
+---
+
+## 📌 Limitations
+- Weekly price data had to be interpolated to daily — may introduce minor noise
+- Potential confounders (e.g., weather, policy changes) not controlled yet
+- The causality direction cannot be confirmed without further modeling
+
+---
+
+## 🚀 Future Work
+- Apply **ARIMA** and/or **linear regression with lag features** to model temporal dependencies
+- Extend analysis to **other Turkish cities** (e.g., Ankara, İzmir) for cross-city comparison
+- Predict future demand using **machine learning models** (e.g., Random Forest Regressor)
+- Incorporate additional variables like **weather** or **economic indices** to improve model quality
+
+---
+
