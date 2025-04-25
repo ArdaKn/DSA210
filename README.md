@@ -54,20 +54,7 @@ However, most research is conducted on national or international levels. This pr
 Applied:
 - **Pearson Correlation Coefficient** for linear relationships
 - **Spearman Rank Correlation** for monotonic relationships
-
----
-
-## 🎨 Exploratory Data Analysis (EDA)
-
-### 📈 Gas Price and Per Capita Ridership Over Time
-![Line Plot](./lineplot_gas_ridership.png)
-
-### 📈 Gas Price vs. Per Capita Ridership Scatter Plot
-![Scatter Plot](./scatterplot_gas_vs_ridership.png)
-
-### 🔥 Correlation Matrix
-![Correlation Heatmap](./correlation_heatmap.png)
-
+  
 ---
 
 ## 🧪 Hypothesis Testing Results
