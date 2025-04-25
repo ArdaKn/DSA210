@@ -19,10 +19,12 @@ However, most research is conducted on national or international levels. This pr
 - **Link:** [https://data.ibb.gov.tr/en/group/ulasim-hizmetleri](https://data.ibb.gov.tr/en/group/ulasim-hizmetleri)  
 - **Content:** Daily passenger counts for metro, tram, bus, and ferry lines in Istanbul
 
-### 2. **Gasoline Price Data**  
-- **Source:** GlobalPetrolPrices - Turkey Gasoline Prices  
-- **Link:** [https://www.globalpetrolprices.com/Turkey/gasoline_prices/](https://www.globalpetrolprices.com/Turkey/gasoline_prices/)  
-- **Content:** Weekly average gasoline prices in Turkey, from March 2015 onward
+**Turkey Gasoline Price Data (2021)**  
+- **Source:** Enerji Piyasası Düzenleme Kurumu (EPDK)  
+- **Report:** “Petrol ve LPG Piyasası Fiyatlandırma Raporu – Aralık 2021”  
+- **Link:** https://www.epdk.gov.tr  
+- **Accessed On:** April 25, 2025  
+- **Details:** Monthly average fuel prices for 95-octane gasoline were extracted from official retail pricing breakdowns.  
 
 ### 📏 Granularity & Preprocessing
 - Public transport data: **daily** resampled to **weekly**
