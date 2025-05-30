@@ -16,13 +16,13 @@ However, most research is conducted on national or international levels. This pr
 
 ### 1. **Public Transport Usage Data**  
 - **Source:** İBB Open Data Portal  
-- **Link:** [https://data.ibb.gov.tr/en/group/ulasim-hizmetleri](https://data.ibb.gov.tr/en/group/ulasim-hizmetleri)  
+- **Link:** [İBB Public Transport Usage Dataset](https://data.ibb.gov.tr/dataset/ibb-toplu-tasima-donemsel-yolculuk-sayilari)
 - **Content:** Daily passenger counts for metro, tram, bus, and ferry lines in Istanbul
 
 ### 2. **Turkey Gasoline Price Data (2021)**  
 - **Source:** Enerji Piyasası Düzenleme Kurumu (EPDK)  
 - **Report:** “Petrol ve LPG Piyasası Fiyatlandırma Raporu – Aralık 2021”  
-- **Link:** [https://www.epdk.gov.tr](https://www.epdk.gov.tr)  
+- **Link:** [EPDK Fuel Price Reports](https://www.epdk.gov.tr/Detay/Icerik/3-100/petrol)
 - **Accessed On:** April 25, 2025  
 - **Details:** Monthly average fuel prices for 95-octane gasoline were extracted from official retail pricing breakdowns.  
 
@@ -48,7 +48,7 @@ By enriching the dataset with **monthly average temperature** and **total precip
 
 ### Methodology
 
-- Weather data was sourced from official monthly climate summaries for Istanbul.
+- **Weather data** was sourced from [Visual Crossing Weather History](https://www.visualcrossing.com/weather-history/İstanbul), providing monthly average temperature and total precipitation for Istanbul.
 - The dataset was merged using the `"month"` column as a key across all sources (gasoline prices, ridership, and weather).
 - Two new variables were introduced:
   - `avg_temp` — Monthly average temperature (°C)
