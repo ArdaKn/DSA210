@@ -35,6 +35,37 @@ However, most research is conducted on national or international levels. This pr
 
 ---
 
+## 📊 Additional Variable: Weather Impact
+
+### Why Include Weather?
+
+Weather conditions can significantly affect daily transport behavior. For instance:
+- **Hot or extremely cold months** may reduce walking and encourage public transport use.
+- **Heavy rainfall** increases reliance on covered or underground transit (e.g., metro, tram), reducing bike or pedestrian activity.
+- Urban planners often use **weather-based demand forecasting** to optimize operations and scheduling.
+
+By enriching the dataset with **monthly average temperature** and **total precipitation**, this project explores whether **climatic factors influence ridership trends**, independently or in conjunction with fuel price fluctuations.
+
+### Methodology
+
+- Weather data was sourced from official monthly climate summaries for Istanbul.
+- The dataset was merged using the `"month"` column as a key across all sources (gasoline prices, ridership, and weather).
+- Two new variables were introduced:
+  - `avg_temp` — Monthly average temperature (°C)
+  - `total_precip` — Monthly total precipitation (mm)
+- Correlations were computed between ridership and weather variables to understand behavioral effects.
+
+### Preliminary Insights
+
+| Variable         | Correlation with Ridership | Interpretation                                    |
+|------------------|----------------------------|--------------------------------------------------|
+| Average Temp     | Negative                   | Warmer months showed slightly lower ridership    |
+| Total Precip     | Positive                   | Rainy months increased public transport use      |
+
+These insights suggest weather plays a **secondary but noteworthy role** in shaping transportation behavior. Including weather data enhances the model's realism and opens new directions for multivariable forecasting.
+
+---
+
 ## Methodology
 
 ### 1. Data Collection & Cleaning
