@@ -2,7 +2,7 @@
 
 ---
 
-## 🏙️ Introduction
+## 1. Introduction
 
 With fluctuating fuel prices, many urban residents reconsider their mode of transportation, shifting between private vehicles and public transport. This project investigates the relationship between **gasoline prices** and **public transport usage** in **Istanbul**, one of the world's most traffic-dense megacities.
 
@@ -10,7 +10,7 @@ The analysis aims to provide actionable insights for **city planners**, **econom
 
 ---
 
-## 🎯 Motivation
+## 2. Motivation
 
 Fuel costs are a fundamental factor in transportation decisions. As prices increase, the use of public transportation may rise as a cost-saving measure. This behavioral shift is not just anecdotal—numerous studies (e.g., Litman, 2022; OECD Transport Reports) suggest strong economic influences on modal choice.
 
@@ -18,7 +18,7 @@ However, most research is conducted on national or international levels. This pr
 
 ---
 
-## 📁 Data Sources
+## 3. Data Sources
 
 ### 1. **Public Transport Usage Data**  
 - **Source:** İBB Open Data Portal  
@@ -39,7 +39,7 @@ However, most research is conducted on national or international levels. This pr
 
 ---
 
-## ⚙️ Data Preprocessing and Enrichment
+## 4. Data Preprocessing and Enrichment
 
 - Public transport data was aggregated from **daily** counts into **monthly** total passenger counts.
 - **Per capita ridership** was calculated by dividing monthly total passengers by Istanbul's estimated population for 2022 (~15,840,900).
@@ -47,7 +47,7 @@ However, most research is conducted on national or international levels. This pr
 
 ---
 
-## 🔬 Exploratory Data Analysis (EDA)
+## 5. Exploratory Data Analysis (EDA)
 
 - Line plots to visualize long-term trends in fuel prices and ridership
 - Correlation matrix heatmaps
@@ -55,7 +55,7 @@ However, most research is conducted on national or international levels. This pr
 
 ---
 
-## 📊 Additional Variable: Weather Impact
+## 6. Additional Variable: Weather Impact
 
 ### Why Include Weather?
 
@@ -85,7 +85,7 @@ These insights suggest weather plays a **secondary but noteworthy role** in shap
 
 ---
 
-## 📈 Hypothesis Testing
+## 7. Hypothesis Testing
 
 - **Null Hypothesis (H₀):** No significant relationship between gasoline price fluctuations and public transport usage.  
 - **Alternative Hypothesis (Hₐ):** Gasoline price increases lead to higher public transport usage.
@@ -105,7 +105,7 @@ Tests Applied:
 
 ---
 
-## 🤖 Machine Learning Model Results
+## 8. Machine Learning Model Results
 
 To quantify the predictive power of external factors, a **linear regression model** was trained using:
 
@@ -124,7 +124,7 @@ Although the dataset size was limited to 12 monthly observations, the results pr
 
 ---
 
-## 📌 Findings
+## 9. Findings
 
 - Positive relationship between fuel price increases and public transportation ridership rates.
 - **Metro** and **ferry** modes showed stronger responsiveness compared to buses.
